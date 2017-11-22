@@ -3,7 +3,7 @@ project(opencv_candidate)
 
 find_package(catkin REQUIRED)
 find_package(libg2o QUIET)
-find_package(OpenCV)
+find_package(OpenCV 2)
 find_library(DEPTH_SENSE_LIBRARIES DepthSense /opt/DepthSenseSDK/lib)
 
 if (${DEPTH_SENSE_LIBRARIES} STREQUAL DEPTH_SENSE_LIBRARIES-NOTFOUND)
@@ -29,7 +29,7 @@ catkin_package(DEPENDS OpenCV ${EXTRA_DEPENDS}
                          ${opencv_candidate_reconst3d}
 )
 
-find_package(OpenCV REQUIRED core imgproc highgui calib3d)
+find_package(OpenCV 2 REQUIRED core imgproc highgui calib3d)
 message(STATUS "OpenCV version: ${OpenCV_VERSION}")
 message(STATUS "OpenCV headers: ${OpenCV_INCLUDE_DIRS}")
 include_directories(SYSTEM ${OpenCV_INCLUDE_DIRS})

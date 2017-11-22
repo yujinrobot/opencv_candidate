@@ -2,7 +2,7 @@
 #set(the_description "a set of RGBD functions")
 #ocv_define_module(rgbd)
 
-find_package(OpenCV REQUIRED)
+find_package(OpenCV 2 REQUIRED)
 if (OpenCV_VERSION VERSION_EQUAL "3")
   return()
 endif()

@@ -4,7 +4,7 @@ if (NOT ${libg2o_FOUND})
 return()
 endif()
 
-find_package(OpenCV REQUIRED)
+find_package(OpenCV 2 REQUIRED)
 
 # Model capture stuff
 find_package(PCL REQUIRED COMPONENTS io filters visualization features segmentation surface)
